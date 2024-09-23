@@ -1,1 +1,154 @@
 hampi
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~$ cd 553
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git branch
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ ls
+file1  file2  file3  file4
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git checkout main
+error: pathspec 'main' did not match any file(s) known to git
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git add file1 file2
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git commit -m "adding these file1 and 2"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'nnrg@nnrg-HP-280-Pro-G6-Microtower-PC.(none)')
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git config --global user.name "hampi-coder"
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git config --global user.email "geereddyhampi@gmail.com"
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git commit -m "adding these file1 and 2"
+[b2 (root-commit) d8b9ed0] adding these file1 and 2
+ 2 files changed, 2 insertions(+)
+ create mode 100644 file1
+ create mode 100644 file2
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git branch
+* b2
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git checkout -b main
+Switched to a new branch 'main'
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git branch
+  b2
+* main
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git checkout -b b2
+fatal: A branch named 'b2' already exists.
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git checkout  b2
+Switched to branch 'b2'
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git branch
+* b2
+  main
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git remote add origin https://github.com/hampi-coder/stop-it.git
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git push -u origin main
+Username for 'https://github.com': hampi-coder
+Password for 'https://hampi-coder@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 273 bytes | 273.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/hampi-coder/stop-it.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git checkout b1
+error: pathspec 'b1' did not match any file(s) known to git
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git checkout -b b1
+Switched to a new branch 'b1'
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git branch
+* b1
+  b2
+  main
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git add file3 file4
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git commit -m "adding these file3 and 4"
+[b1 e5786f1] adding these file3 and 4
+ 2 files changed, 2 insertions(+)
+ create mode 100644 file3
+ create mode 100644 file4
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git remote add origin https://github.com/hampi-coder/hampi1.git
+fatal: remote origin already exists.
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git remote add origin1 https://github.com/hampi-coder/hampi1.git
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git push -u origin main
+Username for 'https://github.com': hampi-coder
+Password for 'https://hampi-coder@github.com': 
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+Everything up-to-date
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git merge b1
+Updating d8b9ed0..e5786f1
+Fast-forward
+ file3 | 1 +
+ file4 | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 file3
+ create mode 100644 file4
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git branch -D b1
+Deleted branch b1 (was e5786f1).
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git branch
+  b2
+* main
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git checkout b2\
+> ^C
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git checkout b2
+Switched to branch 'b2'
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ nano file5
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ 
+
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git add file5
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git commit -m "adding these file5"
+[b2 3428761] adding these file5
+ 1 file changed, 2 insertions(+)
+ create mode 100644 file5
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git remote add origin2 https://github.com/hampi-coder/hampi1.git
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git push -u origin2 main
+Username for 'https://github.com': hampi-coder
+Password for 'https://hampi-coder@github.com': 
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (8/8), 538 bytes | 538.00 KiB/s, done.
+Total 8 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/hampi-coder/hampi1.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin2'.
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ nano file5
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git diff file5
+diff --git a/file5 b/file5
+index 3341de9..1a95ec4 100644
+--- a/file5
++++ b/file5
+@@ -1,2 +1,4 @@
+ this is file5
+ 
++
++this is new line
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ nano file5
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ git diff file5
+diff --git a/file5 b/file5
+index 3341de9..a34691f 100644
+--- a/file5
++++ b/file5
+@@ -1,2 +1 @@
+-this is file5
+-
++this is new line
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ 3$ git diff file5
+3$: command not found
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ diff --git a/file5 b/file5
+diff: unrecognized option '--git'
+diff: Try 'diff --help' for more information.
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ 3$ git diff file5
+3$: command not found
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ diff --git a/file5 b/file5
+diff: unrecognized option '--git'
+diff: Try 'diff --help' for more information.
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ ^C
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ ^C
+nnrg@nnrg-HP-280-Pro-G6-Microtower-PC:~/553$ 
+
